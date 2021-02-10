@@ -1,0 +1,16 @@
+
+<div class="wrapper">
+    <div class="individualUser" *ngFor="let user of users; let i = index">
+    <div class="info">
+        Name: {{ user.fName }} {{ user.lName }}<br>
+        Email: {{ user.email }}
+    </div>
+    <input class="changeClass" type="text" placeholder="Update First Name"/><button (click)="updateUser(i)">Update User First Name</button><br>
+    <button (click)="deleteUser(i)">Delete User</button>
+</div>
+</div>
+
+
+
+<!-- user be able to access pop up that has all information relating to them. 
+    They are then able to edit information and send back to server -->
