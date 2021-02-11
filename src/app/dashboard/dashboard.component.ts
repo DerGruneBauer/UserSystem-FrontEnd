@@ -13,9 +13,8 @@ export class DashboardComponent implements OnInit {
   constructor(private logInService: LogInService) { }
 
   ngOnInit(): void {
-    this.getUsers();
+    
   }
-
 
   getUsers() {
     this.logInService.getUsers().subscribe((data) => {
@@ -24,10 +23,18 @@ export class DashboardComponent implements OnInit {
     })
   }
 
-  // get users() {
-  //   console.log(this.logInService.getUsers());
-  //   return this.logInService.getUsers();
-  // }
+  createUser() {
+    let first = document.querySelector('.fNameInput') as HTMLInputElement;
+    let last = document.querySelector('.lNameInput') as HTMLInputElement;
+    let mail = document.querySelector('.emailInput') as HTMLInputElement;
+    let fName = first.value;
+    let lName = last.value;
+    let email = mail.value;
+
+    this.logInService.createUser(fName, lName, email).subscribe((data) => {
+      console.log(data);
+    })
+  }
 
 
   //Both work after refreshing page.

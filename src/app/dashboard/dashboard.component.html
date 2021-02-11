@@ -1,16 +1,35 @@
-
 <div class="wrapper">
-    <div class="individualUser" *ngFor="let user of users; let i = index">
+  <div class="frontPagePic"></div>
+  <div class="formWrapper">
+      <div class="form">
+    <div class="signUpTitle">Sign Up to Get Started</div>
+    <span class="fNameLabel">First Name</span>
+    <input type="text" class="fNameInput" />
+    <span class="lNameLabel">Last Name</span>
+    <input type="text" class="lNameInput" />
+    <span class="emailLabel">Email</span>
+    <input type="email" class="emailInput" />
+    <span class="emailLabel">Password</span>
+    <input type="password" class="passwordInput" />
+    <br />
+    <button (click)="createUser()">Sign Up!</button>
+  </div>
+  <div class="socialIcons">
+    <a><div class="linkedIcon"></div></a>
+    <a><div class="githubIcon"></div></a>
+    <a><div class="googleIcon"></div></a>
+    <a><div class="facebookIcon"></div></a>
+  </div>
+</div>
+  <!-- <div class="individualUser" *ngFor="let user of users; let i = index">
     <div class="info">
         Name: {{ user.fName }} {{ user.lName }}<br>
         Email: {{ user.email }}
     </div>
     <input class="changeClass" type="text" placeholder="Update First Name"/><button (click)="updateUser(i)">Update User First Name</button><br>
     <button (click)="deleteUser(i)">Delete User</button>
+</div> -->
 </div>
-</div>
-
-
 
 <!-- user be able to access pop up that has all information relating to them. 
     They are then able to edit information and send back to server -->

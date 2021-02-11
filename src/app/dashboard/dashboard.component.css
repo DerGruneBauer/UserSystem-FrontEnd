@@ -1,0 +1,104 @@
+.wrapper {
+    height: 89vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.frontPagePic {
+    margin-left: 10px;
+    width: 50vw;
+    height: 100%;
+    background-image: url('/assets/WorkImage.svg');
+    background-position: center;
+    background-size: 120%;
+    background-repeat: no-repeat;
+}
+
+.formWrapper {
+    width: 50vw;
+    height: 100%;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    width: 47%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.signUpTitle {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+input{
+    height: 40px;
+    width: 100%;   
+    border-radius: 3px;
+    border: solid 1px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.form button {
+    height: 46px;
+    width: 104%;   
+    color: white;
+    font-size: 20px;
+    background-color: #3D66E1;
+    border: none;
+    border-radius: 3px;
+}
+.form button:hover {
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.55);
+}
+
+span {
+    align-self: flex-start;
+    font-weight: bold;
+    margin: 15px 0 3px -4px;
+}
+
+
+/* ICONS  */
+.socialIcons {
+    width: 50%;
+    height: 50px;
+    display: flex;
+}
+
+.socialIcons a, .socialIcons div {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    height: 100%;
+    width: 25%;
+}
+
+.linkedIcon {
+    background-image: url('/assets/Linkedin.svg');
+}
+.githubIcon {
+    background-image: url('/assets/github.svg');
+}
+.googleIcon {
+    background-image: url('/assets/Google.svg');
+}
+.facebookIcon {
+    background-image: url('/assets/facebook.svg');
+}
