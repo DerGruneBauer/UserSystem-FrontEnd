@@ -102,3 +102,9 @@ a {
 .facebookIcon {
     background-image: url('/assets/facebook.svg');
 }
+
+.individualUser {
+    height: 20vh;
+    width: 100vw;
+    border: solid red 1px;
+}

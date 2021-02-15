@@ -1,13 +1,15 @@
 <div class="wrapper">
     <div class="outline">
+        <button class="exit" (click)="closePopUp()">X</button>
     <div class="form">
         <div class="signInTitle">Already have an account?<br> Sign In Below.</div>
+        <div class="errorMessage">Incorrect password or email address</div>
     <span class="emailLabel">Email</span>
     <input type="email" class="emailInput" />
     <span class="emailLabel">Password</span>
-    <input type="password" class="passwordInput" />
+    <input type="password" class="passwordInput" (keyup.enter)="getUserByEmail()"/>
     <br />
-    <button (click)="getUser()">Sign In</button>
+    <button (click)="getUserByEmail()">Sign In</button>
     </div>
 </div>
 </div>

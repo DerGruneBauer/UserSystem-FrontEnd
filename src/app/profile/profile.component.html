@@ -1,0 +1,28 @@
+<div class="divider"></div>
+<div class="wrapper">
+<div class="individualUser">
+    <div class="userPic" [style.background-image]="
+    'url(' + profilePic + ')'
+  "></div>
+    <div class="userInfo">
+        <div class="name">{{ profileUser[0].fName }} {{ profileUser[0].lName }}</div>
+        <div class="email">{{ profileUser[0].email }}</div>
+    </div>
+    <div class="stats">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        <div class="followers">{{ profileUser[0].followers }} followers • {{ profileUser[0].following }} following </div>
+    </div>
+</div>
+<div class="otherInfo">
+    <div class="exampleTitle">Example Content</div>
+    <div class="example" *ngFor = "let item of examples">
+        <div class="iconTitle">
+        <div class="icon"></div>
+        <div class="courseTitle"><span>{{ item }}</span><br>Completed</div>
+    </div>
+        <a class="exampleLink">View Content</a>
+    </div>
+</div>
+</div>

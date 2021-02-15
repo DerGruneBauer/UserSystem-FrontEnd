@@ -1,11 +1,13 @@
 <div class="wrapper">
     <div class="titleLinks">
     <div routerLink="/home" class="title">-Example-</div>
-    <div class="linkWrapper">
+    <!-- <div class="linkWrapper">
     <a>Catalog</a> • 
     <a>Resources</a> • 
     <a>Careers</a>
+</div> -->
 </div>
+<a class="logIn" (click)="showLogIn = !showLogIn" *ngIf="profileUser.length == 0">Log In</a>
+<a class="logIn" (click)="logOut()" *ngIf="profileUser.length > 0" >Log Out</a>
 </div>
-<a routerLink="/logIn" class="logIn">Log In</a>
-</div>
+<app-log-in *ngIf="showLogIn" (closeEvent)="closePopUp()"></app-log-in>
